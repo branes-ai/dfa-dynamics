@@ -292,7 +292,7 @@ namespace sw {
 			}
 		};
 
-		bool operator==(const DomainFlowGraph& lhs, const DomainFlowGraph& rhs) {
+		inline bool operator==(const DomainFlowGraph& lhs, const DomainFlowGraph& rhs) {
 			bool bEqual = true;
 
 			// compare the nodes
@@ -337,7 +337,7 @@ namespace sw {
 
 			return bEqual;
 		}
-		bool operator!=(const DomainFlowGraph& lhs, const DomainFlowGraph& rhs) {
+		inline bool operator!=(const DomainFlowGraph& lhs, const DomainFlowGraph& rhs) {
 			return !(lhs == rhs);
 		}
 
