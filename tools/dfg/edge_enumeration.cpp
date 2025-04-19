@@ -28,11 +28,21 @@ int main(int argc, char** argv) {
     DomainFlowGraph dfg(dataFileName); // Deep Learning graph
     dfg.load(dataFileName);
 
-    // report on the operator statistics
-    reportOperatorStats(dfg);
+    // std::cout << dfg << '\n';
 
-    reportArithmeticComplexity(dfg);
-    reportNumericalComplexity(dfg);
+    // walk the nodes
+    for (const auto& [nodeId, node] : dfg.graph.nodes()) {
+        
+        std::cout << "nodeID: " << nodeId << ", Name " << node.getName() << '\n';
+
+    }
+
+	// walk the edges, and connect the outputs of one node to the inputs of another
+	for (const auto& [edgeId, edge] : dfg.graph.edges()) {
+
+        std::cout << "src Node: " << edgeId.first << " output Slot: " << edge.srcSlot << " dstNode: " << edgeId.second << " input Slot: " << edge.dstSlot << '\n';
+
+    }
 
     return EXIT_SUCCESS;
 }
