@@ -341,11 +341,11 @@ namespace sw {
 			return !(lhs == rhs);
 		}
 
-		std::ostream& operator<<(std::ostream& ostr, const DomainFlowGraph& g) {
+		inline std::ostream& operator<<(std::ostream& ostr, const DomainFlowGraph& g) {
 			return g.save(ostr);
 		}
 
-		std::istream& operator>>(std::istream& istr, DomainFlowGraph& g) {
+		inline std::istream& operator>>(std::istream& istr, DomainFlowGraph& g) {
 			return g.load(istr);
 		}
 
