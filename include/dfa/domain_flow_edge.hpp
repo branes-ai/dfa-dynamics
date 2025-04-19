@@ -33,12 +33,12 @@ namespace sw {
             ~DomainFlowEdge() {}
         };
 
-        bool operator==(const DomainFlowEdge& lhs, const DomainFlowEdge& rhs) {
+        inline bool operator==(const DomainFlowEdge& lhs, const DomainFlowEdge& rhs) {
             return (lhs.flow == rhs.flow) && (lhs.stationair == rhs.stationair) && (lhs.shape == rhs.shape)
                 && (lhs.scalarSizeInBits == rhs.scalarSizeInBits) && (lhs.srcSlot == rhs.srcSlot) && (lhs.dstSlot == rhs.dstSlot)
                 && (lhs.schedule == rhs.schedule);
         }
-        bool operator!=(const DomainFlowEdge& lhs, const DomainFlowEdge& rhs) {
+        inline bool operator!=(const DomainFlowEdge& lhs, const DomainFlowEdge& rhs) {
             return !(lhs == rhs);
         }
 

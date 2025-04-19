@@ -14,10 +14,10 @@ namespace sw {
             IndexPoint(const std::vector<int>& coords) : coordinates(coords) {}
             
             // Comparison operators for use in containers
-            bool operator==(const IndexPoint& other) const {
+            inline bool operator==(const IndexPoint& other) const {
                 return coordinates == other.coordinates;
             }
-            bool operator<(const IndexPoint& other) const {
+            inline bool operator<(const IndexPoint& other) const {
                 return coordinates < other.coordinates;
             }
         };

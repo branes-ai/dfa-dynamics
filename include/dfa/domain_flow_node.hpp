@@ -346,11 +346,11 @@ namespace sw {
             }
         };
 
-		bool operator==(const DomainFlowNode& lhs, const DomainFlowNode& rhs) {
+		inline bool operator==(const DomainFlowNode& lhs, const DomainFlowNode& rhs) {
 			return (lhs.opType == rhs.opType) && (lhs.name == rhs.name) && (lhs.operandType == rhs.operandType) && (lhs.attribute == rhs.attribute)
 				&& (lhs.resultValue == rhs.resultValue) && (lhs.resultType == rhs.resultType) && (lhs.depth == rhs.depth);
 		}
-        bool operator!=(const DomainFlowNode& lhs, const DomainFlowNode& rhs) {
+        inline bool operator!=(const DomainFlowNode& lhs, const DomainFlowNode& rhs) {
             return !(lhs == rhs);
         }
 
